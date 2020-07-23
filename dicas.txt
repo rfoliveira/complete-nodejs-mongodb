@@ -1,0 +1,29 @@
+Para que o projeto esteja com as referências dos pacotes necessários, para assim fazer o 
+donwload deles quando executar em outra máquina
+npm install --save <pacote>
+
+EJS 
+E um módulo que permite escrever páginas html juntamente com javascript de forma dinâmica
+
+Para instalar o EJS
+npm install --save ejs
+
+Para atualizar automaticamente o nodejs
+npm install -g nodemon
+
+Rodando com nodemon
+nodemon arquivo.js
+
+CommonJS
+É a forma de escrita de um módulo para que um require consiga ser usado por alguma aplicação
+
+Pacote npm para mysql
+npm install -s mysql
+
+Consign
+Módulo para organizar as rotas e carregando de forma automática, sem precisar fazer requires.
+Ideal para sistemas grandes com muitas rotas.
+
+Instalando o consign
+npm install -s consign
+
