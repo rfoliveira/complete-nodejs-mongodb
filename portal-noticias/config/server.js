@@ -3,10 +3,12 @@ const express = require('express');
 // const modulo_teste = require('./module_teste');
 const consign = require('consign');
 const bodyParser = require('body-parser');
+const expressValidator = require('express-validator');
 
 // Para que já execute a função e importe em um único comando
 // const express = require('express')();
 const app = express();
+app.use(express.json());
 
 // Definindo o ejs como motor de view
 app.set('view engine', 'ejs');
@@ -18,7 +20,7 @@ app.set('views', './app/views');
 // Configurando o bodyParser
 // Como ele é um middleware, precisa definir antes das rotas e tal
 app.use(bodyParser.urlencoded({extended: true}));
-
+app.use(expressValidator());
 
 // Inclusão do diretório routes para o consign
 // O método "into", reconhece as rotas da aplicação e joga elas dentro de app
