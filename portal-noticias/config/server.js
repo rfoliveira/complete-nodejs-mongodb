@@ -2,6 +2,7 @@ const http = require('http');
 const express = require('express');
 // const modulo_teste = require('./module_teste');
 const consign = require('consign');
+const bodyParser = require('body-parser');
 
 // Para que já execute a função e importe em um único comando
 // const express = require('express')();
@@ -13,6 +14,11 @@ app.set('view engine', 'ejs');
 // Define o diretório padrão de views
 // Esse caminho considera o caminho a partir da pasta app
 app.set('views', './app/views');
+
+// Configurando o bodyParser
+// Como ele é um middleware, precisa definir antes das rotas e tal
+app.use(bodyParser.urlencoded({extended: true}));
+
 
 // Inclusão do diretório routes para o consign
 // O método "into", reconhece as rotas da aplicação e joga elas dentro de app
