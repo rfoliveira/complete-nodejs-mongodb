@@ -35,9 +35,9 @@ module.exports = function(app) {
         
         // Assim a conexão só será usada quando entrar na requisição
         var connection = app.config.dbConnection();
-        var noticiasModel = app.app.models.noticiasModel;
+        var noticiasModel = new app.app.models.NoticiasDAO(connection);
 
-        noticiasModel.getNoticias(connection, (err, result) => {
+        noticiasModel.getNoticias((err, result) => {
             res.render('noticias/noticias', { noticias: result });
          });
 
