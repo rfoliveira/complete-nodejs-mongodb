@@ -32,6 +32,8 @@ consign()
     .then('config/dbConnection.js')
     // Incluindo as models
     .then('app/models')
+    // Inclusão dos controllers
+    .then('app/controllers')
     .into(app);
 
 module.exports = app;
