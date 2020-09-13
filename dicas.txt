@@ -27,3 +27,5 @@ Ideal para sistemas grandes com muitas rotas.
 Instalando o consign
 npm install -s consign
 
+API da NASA - legal para testes
+https://api.nasa.gov/

@@ -17,6 +17,14 @@ app.set('view engine', 'ejs');
 // Esse caminho considera o caminho a partir da pasta app
 app.set('views', './app/views');
 
+// Middleware do express para identificar um diretório 
+// com informações estáticas
+// Dessa forma, ele considera todos os arquivos desse mapeamento
+// como estáticos
+// O links desses arquivos serão considerados a partir 
+// dessa pasta de mapeamento, sem a necessidade de se especificar outro caminho
+app.use(express.static('./app/public'));
+
 // Configurando o bodyParser
 // Como ele é um middleware, precisa definir antes das rotas e tal
 app.use(bodyParser.urlencoded({extended: true}));
